@@ -1,0 +1,1334 @@
+/*
+Comandos
+sass --watch sass:css
+*/
+.wow {
+  visibility: hidden;
+}
+
+/*============================================
+                 PRELOADER
+============================================*/
+.hidden {
+  overflow: hidden;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262525;
+  z-index: 98;
+}
+#preloader #loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #46a4f6;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#preloader #loader::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #168cf4;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+#preloader #loader::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #085BA4;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#preloader .texto {
+  width: 100%;
+  position: absolute;
+  color: #7B7B7B;
+  top: 62%;
+}
+#preloader .texto h3 {
+  padding: 0;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+#preloader .texto h5 {
+  /*detail*/
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+
+/*============================================
+                  HEADER
+============================================*/
+#inicio #menu-items {
+  background: #262525;
+}
+#inicio #menu-items a {
+  color: #7B7B7B;
+}
+#inicio #menu-items a i {
+  color: #7B7B7B;
+}
+#inicio .movil .fixed-action-btn {
+  right: 82%;
+  height: 96%;
+}
+#inicio .movil .fixed-action-btn .btn-floating {
+  background: #085BA4;
+}
+#inicio .movil .fixed-action-btn .btn-floating i {
+  color: #262525;
+}
+#inicio .pc .fixed-action-btn {
+  right: 94%;
+  height: 96%;
+}
+#inicio .pc .fixed-action-btn .btn-floating {
+  background: #085BA4;
+}
+#inicio .pc .fixed-action-btn .btn-floating i {
+  color: #262525;
+}
+#inicio .header-background {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 370px;
+  background: url("../images/inicio.jpg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+#inicio .header-background .card {
+  background-color: #262525;
+}
+#inicio .header-background #profile {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+#inicio .header-background #profile img {
+  width: 365px;
+  height: 500px;
+}
+#inicio .header-background .card-content {
+  color: #7B7B7B;
+}
+#inicio .header-background .card-content .clearfix {
+  clear: both;
+}
+#inicio .header-background .card-content .title {
+  display: block;
+  float: left;
+  /*color: #000;*/
+  line-height: 26px;
+}
+#inicio .header-background .card-content .content {
+  display: block;
+  margin-left: 30px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+}
+#inicio .header-background .card-content .social {
+  top: 0;
+  margin-left: 5px;
+  margin-bottom: 4px;
+}
+@media (max-width: 992px) {
+  #inicio .header-background {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    z-index: 1;
+    padding-top: 100px;
+  }
+  #inicio .header-background #profile {
+    position: ansolute;
+    bottom: 83%;
+    left: 0;
+    width: 150px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1;
+    background-color: transparent;
+  }
+  #inicio .header-background #profile img {
+    width: 250px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    border: 1px solid #000000;
+  }
+  #inicio .header-background .card-content {
+    padding-top: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  #inicio .header-background #profile img {
+    height: 505px;
+  }
+}
+@media (min-width: 1450px) {
+  #inicio .header-background #profile img {
+    height: 470px;
+  }
+}
+
+/*============================================
+                  INFORMACION
+============================================*/
+#informacion .card {
+  background-color: #262525;
+}
+#informacion .card-content {
+  color: #7B7B7B;
+}
+#informacion .botonconf {
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  animation-delay: 1s;
+  text-align: center;
+}
+#informacion .botonconf .btn {
+  margin: 7px 7px;
+  background: #085BA4;
+  color: #000000;
+  width: 180px;
+  border-radius: 30px;
+}
+
+/*============================================
+                  EDUCACION
+============================================*/
+#educacion h4 {
+  color: #7B7B7B;
+}
+#educacion h4 .icono {
+  width: 45px;
+  height: 45px;
+  vertical-align: text-top;
+}
+#educacion .timeline {
+  position: relative;
+}
+#educacion .timeline .timeline-event {
+  position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+#educacion .timeline .timeline-event .timeline-content {
+  position: relative;
+  width: calc(50% - 50px);
+}
+#educacion .timeline .timeline-event::before {
+  display: block;
+  content: "";
+  width: 5px;
+  height: calc(50% - 30px);
+  position: absolute;
+  background: #085BA4;
+  left: calc(50% - 1px);
+  top: 0;
+}
+#educacion .timeline .timeline-event::after {
+  display: block;
+  content: "";
+  width: 5px;
+  height: calc(50% - 30px);
+  position: absolute;
+  background: #085BA4;
+  left: calc(50% - 1px);
+  top: calc(50% + 30px);
+}
+#educacion .timeline .timeline-event:first-child::before, #educacion .timeline .timeline-event:last-child::after {
+  display: none;
+}
+#educacion .timeline .timeline-event:nth-child(even) .timeline-content {
+  margin-left: calc(50% + 50px);
+}
+#educacion .timeline .timeline-event:nth-child(odd) .timeline-content {
+  margin-left: 0;
+}
+#educacion .timeline .timeline-event .card {
+  background-color: #262525;
+}
+#educacion .timeline .timeline-event .card-content {
+  color: #7B7B7B;
+}
+#educacion .timeline .timeline-event blockquote {
+  border-left: 6px solid #085BA4;
+}
+#educacion .timeline .timeline-badge {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #085BA4;
+  color: #262525;
+  top: calc(50% - 25px);
+  right: calc(50% - 25px);
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+  cursor: default;
+}
+#educacion .timeline .timeline-badge h6 {
+  font-weight: bold;
+  font-size: 27px;
+  line-height: 25px;
+}
+@media (max-width: 600px) {
+  #educacion .timeline .timeline-event .timeline-content {
+    width: calc(100% - 70px);
+  }
+  #educacion .timeline .timeline-event::before, #educacion .timeline .timeline-event::after {
+    left: 19px;
+  }
+  #educacion .timeline .timeline-event:nth-child(even) .timeline-content, #educacion .timeline .timeline-event:nth-child(odd) .timeline-content {
+    margin-left: 70px;
+  }
+  #educacion .timeline .timeline-badge {
+    left: 0;
+    right: auto;
+  }
+}
+
+/*============================================
+                  HABILIDADES
+============================================*/
+#habilidades h4 {
+  color: #7B7B7B;
+}
+#habilidades h4 .icono {
+  width: 45px;
+  height: 45px;
+  vertical-align: text-top;
+}
+#habilidades .card {
+  background-color: #085BA4;
+}
+#habilidades .card-content {
+  color: #262525;
+}
+#habilidades .card-content .skills-title {
+  margin: 15px 0;
+}
+#habilidades .card-content .skills-title h6 {
+  font-weight: 500;
+  color: #262525;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+#habilidades .card-content .skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 17px;
+  margin-top: 45px;
+  width: 100%;
+  padding: 0 0;
+  background: #7B7B7B;
+  height: 4px;
+}
+#habilidades .card-content .skillbar .skillbar-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1em;
+}
+#habilidades .card-content .skillbar .skillbar-title span {
+  /*titulo de la barra*/
+  display: block;
+  padding: 3px 0;
+  margin-top: -25px;
+  line-height: 15px;
+  color: #262525;
+}
+#habilidades .card-content .skillbar .skillbar-bar {
+  height: 100%;
+  width: 0%;
+  background: #262525;
+  position: absolute;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+#habilidades .card-content .skillbar .skill-bar-percent {
+  position: absolute;
+  right: 1px;
+  top: -20px;
+  font-size: 0.8em;
+  line-height: 15px;
+  color: #262525;
+}
+#habilidades .card-content .skillbar #python {
+  -webkit-animation-name: python;
+  -moz-animation-name: python;
+  animation-name: python;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#habilidades .card-content .skillbar #c {
+  -webkit-animation-name: c;
+  -moz-animation-name: c;
+  animation-name: c;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+#habilidades .card-content .skillbar #django {
+  -webkit-animation-name: django;
+  -moz-animation-name: django;
+  animation-name: django;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#habilidades .card-content .skillbar #materialize {
+  -webkit-animation-name: materialize;
+  -moz-animation-name: materialize;
+  animation-name: materialize;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+#habilidades .card-content .skillbar #boostrap {
+  -webkit-animation-name: boostrap;
+  -moz-animation-name: boostrap;
+  animation-name: boostrap;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#habilidades .card-content .skillbar #efc {
+  -webkit-animation-name: efc;
+  -moz-animation-name: efc;
+  animation-name: efc;
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+#habilidades .card-content .skillbar #html {
+  -webkit-animation-name: html;
+  -moz-animation-name: html;
+  animation-name: html;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#habilidades .card-content .skillbar #css {
+  -webkit-animation-name: css;
+  -moz-animation-name: css;
+  animation-name: css;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+#habilidades .card-content .skillbar #sass {
+  -webkit-animation-name: sass;
+  -moz-animation-name: sass;
+  animation-name: sass;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#habilidades .card-content .skillbar #javascript {
+  -webkit-animation-name: javascript;
+  -moz-animation-name: javascript;
+  animation-name: javascript;
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+#habilidades .card-content .skillbar #ipv4 {
+  -webkit-animation-name: ipv4;
+  -moz-animation-name: ipv4;
+  animation-name: ipv4;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#habilidades .card-content .skillbar #ipv6 {
+  -webkit-animation-name: ipv6;
+  -moz-animation-name: ipv6;
+  animation-name: ipv6;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+#habilidades .card-content .skillbar #cisco {
+  -webkit-animation-name: cisco;
+  -moz-animation-name: cisco;
+  animation-name: cisco;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#habilidades .card-content .skillbar #acl {
+  -webkit-animation-name: acl;
+  -moz-animation-name: acl;
+  animation-name: acl;
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+#habilidades .card-content .skillbar #iot {
+  -webkit-animation-name: iot;
+  -moz-animation-name: iot;
+  animation-name: iot;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
+}
+#habilidades .card-content .skillbar #servidores {
+  -webkit-animation-name: servidores;
+  -moz-animation-name: servidores;
+  animation-name: servidores;
+  -webkit-animation-delay: 3.5s;
+  -moz-animation-delay: 3.5s;
+  animation-delay: 3.5s;
+}
+#habilidades .card-content .skillbar #sql {
+  -webkit-animation-name: sql;
+  -moz-animation-name: sql;
+  animation-name: sql;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#habilidades .card-content .skillbar #postgre {
+  -webkit-animation-name: postgre;
+  -moz-animation-name: postgre;
+  animation-name: postgre;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+#habilidades .card-content .skillbar #mysql {
+  -webkit-animation-name: mysql;
+  -moz-animation-name: mysql;
+  animation-name: mysql;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#habilidades .card-content .skillbar #windows {
+  -webkit-animation-name: windows;
+  -moz-animation-name: windows;
+  animation-name: windows;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#habilidades .card-content .skillbar #linux {
+  -webkit-animation-name: linux;
+  -moz-animation-name: linux;
+  animation-name: linux;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+#habilidades .card-content .skillbar #git {
+  -webkit-animation-name: git;
+  -moz-animation-name: git;
+  animation-name: git;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  animation-delay: 2s;
+}
+#habilidades .card-content .skillbar #scrum {
+  -webkit-animation-name: scrum;
+  -moz-animation-name: scrum;
+  animation-name: scrum;
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  animation-delay: 2.5s;
+}
+#habilidades .card-content .skillbar #espanol {
+  -webkit-animation-name: espanol;
+  -moz-animation-name: espanol;
+  animation-name: espanol;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+#habilidades .card-content .skillbar #ingles {
+  animation-name: ingles;
+  animation-delay: 1.5s;
+}
+@-webkit-keyframes python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes c {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-moz-keyframes python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes c {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes python {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes c {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-webkit-keyframes django {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes materialize {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes boostrap {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-webkit-keyframes efc {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@-moz-keyframes django {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes materialize {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes boostrap {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-moz-keyframes efc {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes django {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes materialize {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes boostrap {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes efc {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@-webkit-keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes sass {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-webkit-keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-moz-keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes sass {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-moz-keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes sass {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes javascript {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-webkit-keyframes ipv4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes ipv6 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes cisco {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-webkit-keyframes acl {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-webkit-keyframes iot {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@-webkit-keyframes servidores {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@-moz-keyframes ipv4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes ipv6 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes cisco {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-moz-keyframes acl {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-moz-keyframes iot {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@-moz-keyframes servidores {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes ipv4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes ipv6 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes cisco {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes acl {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes iot {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes servidores {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@-webkit-keyframes sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes postgre {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes mysql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-moz-keyframes sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes postgre {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes mysql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@keyframes sql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes postgre {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes mysql {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+@-webkit-keyframes windows {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-webkit-keyframes linux {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-webkit-keyframes git {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@-webkit-keyframes scrum {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@-moz-keyframes windows {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@-moz-keyframes linux {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@-moz-keyframes git {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@-moz-keyframes scrum {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@keyframes windows {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes linux {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes git {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+@keyframes scrum {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@-webkit-keyframes espanol {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes ingles {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@-moz-keyframes espanol {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes ingles {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@keyframes espanol {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes ingles {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+/*============================================
+                  PASATIEMPOS
+============================================*/
+#pasatiempos h4 {
+  color: #7B7B7B;
+}
+#pasatiempos h4 .icono {
+  width: 45px;
+  height: 45px;
+  vertical-align: text-top;
+}
+#pasatiempos .card {
+  background-color: #262525;
+}
+#pasatiempos .card .box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#pasatiempos .card .box .icono2 {
+  width: 60px;
+  height: 60px;
+}
+#pasatiempos .card .box .color1t {
+  color: #262525;
+}
+#pasatiempos .card .box .color2t {
+  color: #085BA4;
+}
+#pasatiempos .card .fondo {
+  background: #085BA4;
+}
+
+/*============================================
+                  CONTACTAME
+============================================*/
+#contactame h4 {
+  color: #7B7B7B;
+}
+#contactame h4 .icono {
+  width: 45px;
+  height: 45px;
+  vertical-align: text-top;
+}
+#contactame .card {
+  background-color: #262525;
+}
+#contactame .card-content {
+  color: #7B7B7B;
+}
+#contactame .card-content .input-field {
+  color: #7B7B7B;
+}
+#contactame .card-content .input-field label {
+  color: #7B7B7B;
+}
+#contactame .card-content .input-field input[type=text], #contactame .card-content .input-field input[type=email], #contactame .card-content .input-field textarea {
+  color: #7B7B7B;
+}
+#contactame .card-content .input-field input[type=text]:focus + label, #contactame .card-content .input-field input[type=email]:focus + label, #contactame .card-content .input-field textarea:focus + label {
+  color: #085BA4;
+}
+#contactame .card-content .input-field input[type=text]:focus, #contactame .card-content .input-field input[type=email]:focus, #contactame .card-content .input-field textarea:focus {
+  border-bottom: 1px solid #085BA4;
+  box-shadow: 0 1px 0 0 #085BA4;
+}
+#contactame .card-content .input-field .prefix.active {
+  color: #085BA4;
+}
+#contactame .card-content .input-field textarea {
+  max-height: 105px;
+  min-height: 105px;
+}
+#contactame .card-content .btn {
+  margin: 7px 7px;
+  background: #085BA4;
+  color: #000000;
+  width: 180px;
+  border-radius: 30px;
+}
+#contactame .is-hidden {
+  visibility: hidden;
+}
+#contactame .indeterminate {
+  background: #085BA4;
+}
+#contactame .google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 470px;
+  overflow: hidden;
+}
+#contactame .google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#boton-up {
+  display: none;
+}
+#boton-up .fixed-action-btn .btn-floating {
+  background: #085BA4;
+}
+#boton-up .fixed-action-btn .btn-floating i {
+  color: #262525;
+}
+
+/*============================================
+                  FOOTER
+============================================*/
+.hecho {
+  color: #7B7B7B;
+}
+
+.dueno {
+  color: #085BA4;
+}
+
+/*# sourceMappingURL=estilos.css.map */

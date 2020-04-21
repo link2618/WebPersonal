@@ -1,0 +1,814 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/logo-web.png' %}">
+
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <title>Hugo Eduardo Carvajalino Solano</title>
+</head>
+<body style="background-color:#262525;" class="hidden">
+
+    <!--==========================================
+                        PRELOADER
+    ===========================================-->
+
+    <div id="preloader">
+        <div id="loader"></div>
+        <div class="center texto">
+            <b><i><h3>Hugo Eduardo Carvajalino Solano</h3></i></b>
+            <i><h5>Ingeniero de Sistemas</h5></i>
+        </div>
+    </div>
+
+
+    <!--==========================================
+                        HEADER
+    ===========================================-->
+
+    <header id="inicio">
+        <div class="movil hide-on-med-and-up">
+            <div class="fixed-action-btn">
+                <a href="#" data-target="menu-items" class="sidenav-trigger waves-effect btn-floating"><i class="material-icons">menu</i></a>
+            </div>
+        </div>
+        <div class="pc hide-on-small-and-down">
+            <div class="fixed-action-btn">
+                <a href="#" data-target="menu-items" class="sidenav-trigger waves-effect btn-floating"><i class="material-icons">menu</i></a>
+            </div>
+        </div>
+        <!-- Menu items -->
+        <ul class="sidenav" id="menu-items">
+            <li>
+                <div class="background">
+                    <img src="{% static 'images/logo-web.png' %}" alt="Logo Web" class="responsive-img">
+                </div>
+            </li>
+            <li>
+                <a href="#pre" class="waves-effect sidenav-close">
+                    <i class="material-icons fas fa-home"></i>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="#informacion" class="waves-effect sidenav-close">
+                    <i class="material-icons fas fa-info-circle"></i>
+                    Información
+                </a>
+            </li>
+            <li>
+                <a href="#educacion" class="waves-effect sidenav-close">
+                    <i class="material-icons fas fa-graduation-cap"></i>
+                    Educación
+                </a>
+            </li>
+            <li>
+                <a href="#habilidades" class="waves-effect sidenav-close">
+                    <i class="material-icons fas fa-project-diagram"></i>
+                    Habilidades
+                </a>
+            </li>
+            <li>
+                <a href="#pasatiempos" class="waves-effect sidenav-close">
+                    <i class="material-icons fas fa-puzzle-piece"></i>
+                    Pasatiempos
+                </a>
+            </li>
+            <li>
+                <a href="#contactame" class="waves-effect sidenav-close">
+                    <i class="material-icons fas fa-envelope"></i>
+                    Contáctame
+                </a>
+            </li>
+        </ul>
+
+        <div class="header-background section scrollspy" id="pre">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="card z-depth-2 wow fadeInUp">
+                            <!-- Imagen de perfil -->
+                            <div id="profile" class="right">
+                                <img alt="Imagen de Perfil" class="responsive-img" src="{% static 'images/hugo_carvajalino.jpg' %}">
+                            </div>
+                            <div class="card-content">
+                                <!-- Nombre y Carrera -->
+                                    <div class="row">
+                                        <div class="col s12 l6 xl7">
+                                            <h4 class="hide-on-med-and-up text-uppercase center"><b>Hugo Eduardo Carvajalino Solano</b></h4>
+                                            <h4 class="hide-on-small-and-down text-uppercase left"><b>Hugo Eduardo Carvajalino Solano</b></h4>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col s12 l6 xl7">
+                                            <h5 class="hide-on-med-and-up center">Ingeniero de Sistemas</h5>
+                                            <h5 class="hide-on-small-and-down left">Ingeniero de Sistemas</h5>
+                                        </div>
+                                    </div>
+                                <!-- Informacion -->
+                                <div class="left">
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <ul class="informacionpersonal">
+                                                <li class="clearfix">
+                                                    <span class="title">
+                                                        <i class="material-icons">email</i>
+                                                    </span>
+                                                    <span class="content">
+                                                        link_2618@hotmail.com
+                                                    </span>
+                                                </li>
+
+                                                <li class="clearfix">
+                                                    <span class="title">
+                                                        <i class="material-icons fab fa-skype" aria-hidden="true"></i>
+                                                    </span>
+                                                    <span class="content">
+                                                        link_2618
+                                                    </span>
+                                                </li>
+
+                                                <li class="clearfix">
+                                                    <span class="title">
+                                                    <i class="material-icons">phone_iphone</i>
+                                                    </span>
+                                                    <span class="content">
+                                                        +57 316 543 0354
+                                                    </span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <span class="title">
+                                                    <i class="material-icons">phone_iphone</i>
+                                                    </span>
+                                                    <span class="content">
+                                                        +57 310 482 0983
+                                                    </span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <span class="title">
+                                                    <i class="material-icons">location_on</i>
+                                                    </span>
+                                                    <span class="content">
+                                                        Floridablanca, Santander, Colombia
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Links de redes sociales -->
+                                <div class="">
+                                    <div class="row">
+                                        <div class="col s12">
+                                            <div class="hide-on-med-and-up center">
+                                                <a href="https://www.facebook.com/Hugo.E.C.S" class="social btn-floating indigo waves-effect waves-light" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="https://www.linkedin.com/in/hugo-carvajalino-solano-4420b1172/" class="social  btn-floating blue darken-3 waves-effect waves-light" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="https://twitter.com/HugoCarvajalino" class="social  btn-floating blue waves-effect waves-light" target="_blank"><i class="fab fa-twitter"></i></a>
+                                                <a href="https://api.whatsapp.com/send?phone=573165430354&text=Hola,%20me%20gustar%C3%ADa%20hacer%20una%20consulta." class="social  btn-floating green waves-effect waves-light" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                                <a href="https://github.com/link2618?tab=repositories" class="social  btn-floating grey darken-3 waves-effect waves-light" target="_blank"><i class="fab fa-github"></i></a>
+                                            </div>
+                                            <div class="hide-on-small-and-down left">
+                                                <a href="https://www.facebook.com/Hugo.E.C.S" class="social btn-floating indigo waves-effect waves-light" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="https://www.linkedin.com/in/hugo-carvajalino-solano-4420b1172/" class="social  btn-floating blue darken-3 waves-effect waves-light" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="https://twitter.com/HugoCarvajalino" class="social  btn-floating blue waves-effect waves-light" target="_blank"><i class="fab fa-twitter"></i></a>
+                                                <a href="https://api.whatsapp.com/send?phone=573165430354&text=Hola,%20me%20gustar%C3%ADa%20hacer%20una%20consulta." class="social  btn-floating green waves-effect waves-light" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                                                <a href="https://github.com/link2618?tab=repositories" class="social  btn-floating grey darken-3 waves-effect waves-light" target="_blank"><i class="fab fa-github"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--==========================================
+                     INFORMACION
+    ===========================================-->
+
+    <section id="informacion" class="section scrollspy">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card z-depth-2 wow fadeInUp">
+                        <div class="card-content">
+                            <p class="hide-on-med-and-up text-uppercase" ALIGN="center">
+                                Ingeniero de Sistemas de la Universidad Francisco de Paula Santander
+                                Ocaña, Emprendedor y trabajador, con gran sentido de pertenencia, responsable,
+                                proactivo, excelente disposición para el trabajo en equipo  y capacidad para
+                                adaptarme al entorno de trabajo en el cual me desempeñe, con capacidad de
+                                discernir un problema globalmente dentro del mundo del saber, definiendo y
+                                encontrando alternativas de solución, aplicando y aprovechando al máximo mis
+                                habilidades y conocimientos adquiridos, utilizando para ello el diseño,
+                                desarrollo y soporte de sistemas de información complejos de cualquier tipo de
+                                organización.
+                            </p>
+                            <p class="hide-on-small-and-down text-uppercase" ALIGN="justify">
+                                Ingeniero de Sistemas de la Universidad Francisco de Paula Santander
+                                Ocaña, Emprendedor y trabajador, con gran sentido de pertenencia, responsable,
+                                proactivo, excelente disposición para el trabajo en equipo  y capacidad para
+                                adaptarme al entorno de trabajo en el cual me desempeñe, con capacidad de
+                                discernir un problema globalmente dentro del mundo del saber, definiendo y
+                                encontrando alternativas de solución, aplicando y aprovechando al máximo mis
+                                habilidades y conocimientos adquiridos, utilizando para ello el diseño,
+                                desarrollo y soporte de sistemas de información complejos de cualquier tipo de
+                                organización.
+                            </p>
+                        </div>
+                        <div class="card-action">
+                            <div class="botonconf">
+                                <!--<button type="button" name="button" class="btn waves-effect">Descargar HV</button>-->
+                                <a download href="{% static 'pdf/Hoja de vida - Ingeniero Hugo Carvajalino.pdf' %}" class="btn waves-effect">Descargar HV</a>
+                                <a href="#contactame" class="btn waves-effect">Contactame</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==========================================
+                      EDUCACION
+    ===========================================-->
+
+    <section id="educacion" class="scrollspy">
+        <div class="container">
+            <!-- Titulo -->
+            <h4 class="center wow zoomIn">
+                <img class="icono tooltipped" src="{% static 'flaticon/png/001-curriculum.png' %}" alt="Icono realizado por Freepik de www.flaticon.com" data-tooltip="Icono realizado por Freepik de www.flaticon.com">
+                EDUCACIÓN
+            </h4>
+        </div>
+        <!-- Contenido linea del tiempo -->
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="timeline">
+                        <!-- Primaria -->
+                        <div class="timeline-event wow fadeInUp">
+                            <div class="card z-depth-2 timeline-content">
+                                <blockquote>
+                                    <!--<div class="letra-titulo z-depth-1"><h6>P</h6></div>-->
+                                    <div class="card-content">
+                                        <span class="card-title"><u><b>Escuela Primaria</b></u></span>
+                                        <font SIZE=3>
+                                            <p>Instituto La Giralda</p>
+                                            <p>Cartagena, Bolívar, Colombia</p>
+                                        </font>
+                                        <br>
+                                        <font SIZE=2><i><p>1996 - 2003</p></i></font>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="timeline-badge"><h6>P</h6></div>
+                        </div>
+                        <!-- Secundaria -->
+                        <div class="timeline-event wow fadeInUp">
+                            <div class="card z-depth-2 timeline-content">
+                                <blockquote>
+                                    <!--<div class="letra-titulo z-depth-1"><h6>S</h6></div>-->
+                                    <div class="card-content">
+                                        <span class="card-title"><u><b>Escuela de Secundaria</b></u></span>
+                                        <font SIZE=3>
+                                            <p>Institución Educativa Seminario De Cartagena</p>
+                                            <p>Cartagena, Bolívar, Colombia</p>
+                                        </font>
+                                        <br>
+                                        <font SIZE=2><i><p>2004 - 2007</p></i></font>
+                                        <br>
+                                        <div class="divider" style="background:#7B7B7B;"></div>
+                                        <br>
+                                        <font SIZE=3>
+                                            <p>Colegio Seminario San Pio X</p>
+                                            <p>Floridablanca, Santander, Colombia</p>
+                                        </font>
+                                        <br>
+                                        <font SIZE=2><i><p>2008 - 2009</p></i></font>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="timeline-badge"><h6>S</h6></div>
+                        </div>
+                        <!-- Universidad -->
+                        <div class="timeline-event wow fadeInUp">
+                            <div class="card z-depth-2 timeline-content">
+                                <blockquote>
+                                    <!--<div class="letra-titulo z-depth-1"><h6><i class="material-icons fas fa-graduation-cap"></i></h6></div>-->
+                                    <div class="card-content">
+                                        <span class="card-title"><u><b>Ingeniería de Sistemas</b></u></span>
+                                        <font SIZE=3>
+                                            <p>Universidad Francisco de Paula Santander</p>
+                                            <p>Ocaña, Norte de Santander, Colombia</p>
+                                        </font>
+                                        <br>
+                                        <font SIZE=2><i><p>2013 - 2019</p></i></font>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="timeline-badge"><h6><i class="material-icons fas fa-graduation-cap"></i></h6></div>
+                        </div>
+                        <!-- Diplomado -->
+                        <div class="timeline-event wow fadeInUp">
+                            <div class="card z-depth-2 timeline-content">
+                                <blockquote>
+                                    <!--<div class="letra-titulo z-depth-1"><h6>D</h6></div>-->
+                                    <div class="card-content">
+                                        <span class="card-title"><u><b>Diplomado</b></u></span>
+                                        <font SIZE=3>
+                                            <p>Universidad Francisco de Paula Santander</p>
+                                            <p>Cisco Network Academy</p>
+                                            <p>Entornos LAN</p>
+                                            <p>Entornos WAN</p>
+                                            <p>Ocaña, Norte de Santander, Colombia</p>
+                                        </font>
+                                        <br>
+                                        <font SIZE=2><i><p>2018</p></i></font>
+                                    </div>
+                                </blockquote>
+                            </div>
+                            <div class="timeline-badge"><h6>D</h6></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin del contenido de la linea del tiempo -->
+    </section>
+
+    <!--==========================================
+                      HABILIDADES
+    ===========================================-->
+
+    <section id="habilidades" class="scrollspy">
+        <!-- Titulo -->
+        <div class="container">
+            <h4 class="center  wow zoomIn">
+                <img class="icono tooltipped" src="{% static 'flaticon/png/002-obrero.png' %}" alt="Icono realizado por Vector Market de www.flaticon.com" data-tooltip="Icono realizado por Vector Market de www.flaticon.com">
+                HABILIDADES
+            </h4>
+        </div>
+        <!-- Contenido -->
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card z-depth-2 wow fadeInUp">
+                        <div class="card-content">
+                            <div class="row">
+                                <!-- Lenguajes Logicos -->
+                                <div class="col s12 m4">
+                                    <!-- Titulo -->
+                                    <div class="skills-title">
+                                        <h6 class="center">Lenguajes Logicos</h6>
+                                    </div>
+                                    <!-- Item 1 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>PYTHON</span></div>
+                                        <div class="skillbar-bar wow" id="python"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="skillbar" data-percent="50%">
+                                        <div class="skillbar-title"><span>C#</span></div>
+                                        <div class="skillbar-bar wow" id="c"></div>
+                                        <div class="skill-bar-percent">50%</div>
+                                    </div>
+                                </div>
+                                <!-- Frameworks -->
+                                <div class="col s12 m4">
+                                    <!-- Titulo -->
+                                    <div class="skills-title">
+                                        <h6 class="center">Frameworks</h6>
+                                    </div>
+                                    <!-- Item 1 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>Django</span></div>
+                                        <div class="skillbar-bar wow" id="django"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>Materialize CSS</span></div>
+                                        <div class="skillbar-bar wow" id="materialize"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 3 -->
+                                    <div class="skillbar" data-percent="50%">
+                                        <div class="skillbar-title"><span>Boostrap 4</span></div>
+                                        <div class="skillbar-bar wow" id="boostrap"></div>
+                                        <div class="skill-bar-percent">50%</div>
+                                    </div>
+                                    <!-- Item 4 -->
+                                    <div class="skillbar" data-percent="40%">
+                                        <div class="skillbar-title"><span>Entity Framework Core</span></div>
+                                        <div class="skillbar-bar wow" id="efc"></div>
+                                        <div class="skill-bar-percent">40%</div>
+                                    </div>
+                                </div>
+                                <!-- Lenguajes Etiquetas -->
+                                <div class="col s12 m4">
+                                    <!-- Titulo -->
+                                    <div class="skills-title">
+                                        <h6 class="center">Lenguajes Etiquetas</h6>
+                                    </div>
+                                    <!-- Item 1 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>HTML5</span></div>
+                                        <div class="skillbar-bar wow" id="html"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>CSS</span></div>
+                                        <div class="skillbar-bar wow" id="css"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 3 -->
+                                    <div class="skillbar" data-percent="50%">
+                                        <div class="skillbar-title"><span>Sass</span></div>
+                                        <div class="skillbar-bar wow" id="sass"></div>
+                                        <div class="skill-bar-percent">50%</div>
+                                    </div>
+                                    <!-- Item 4 -->
+                                    <div class="skillbar" data-percent="50%">
+                                        <div class="skillbar-title"><span>JavaScript</span></div>
+                                        <div class="skillbar-bar wow" id="javascript"></div>
+                                        <div class="skill-bar-percent">50%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- Redes -->
+                                <div class="col s12 m4">
+                                    <!-- Titulo -->
+                                    <div class="skills-title">
+                                        <h6 class="center">Redes</h6>
+                                    </div>
+                                    <!-- Item 1 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>IPv4</span></div>
+                                        <div class="skillbar-bar wow" id="ipv4"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>IPv6</span></div>
+                                        <div class="skillbar-bar wow" id="ipv6"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 3 -->
+                                    <div class="skillbar" data-percent="60%">
+                                        <div class="skillbar-title"><span>Tecnologías Cisco</span></div>
+                                        <div class="skillbar-bar wow" id="cisco"></div>
+                                        <div class="skill-bar-percent">60%</div>
+                                    </div>
+                                    <!-- Item 4 -->
+                                    <div class="skillbar" data-percent="50%">
+                                        <div class="skillbar-title"><span>Control de Trafico ACL</span></div>
+                                        <div class="skillbar-bar wow" id="acl"></div>
+                                        <div class="skill-bar-percent">50%</div>
+                                    </div>
+                                    <!-- Item 5 -->
+                                    <div class="skillbar" data-percent="40%">
+                                        <div class="skillbar-title"><span>IoT</span></div>
+                                        <div class="skillbar-bar wow" id="iot"></div>
+                                        <div class="skill-bar-percent">40%</div>
+                                    </div>
+                                    <!-- Item 6 -->
+                                    <div class="skillbar" data-percent="30%">
+                                        <div class="skillbar-title"><span>Servidores</span></div>
+                                        <div class="skillbar-bar wow" id="servidores"></div>
+                                        <div class="skill-bar-percent">30%</div>
+                                    </div>
+                                </div>
+                                <!-- Bases de Datos -->
+                                <div class="col s12 m4">
+                                    <!-- Titulo -->
+                                    <div class="skills-title">
+                                        <h6 class="center">Bases de Datos</h6>
+                                    </div>
+                                    <!-- Item 1 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>SQL-Server</span></div>
+                                        <div class="skillbar-bar wow" id="sql"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>PostgreSQL</span></div>
+                                        <div class="skillbar-bar wow" id="postgre"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 3 -->
+                                    <div class="skillbar" data-percent="50%">
+                                        <div class="skillbar-title"><span>MySql</span></div>
+                                        <div class="skillbar-bar wow" id="mysql"></div>
+                                        <div class="skill-bar-percent">50%</div>
+                                    </div>
+                                </div>
+                                <!-- Otros -->
+                                <div class="col s12 m4">
+                                    <!-- Titulo -->
+                                    <div class="skills-title">
+                                        <h6 class="center">Otros</h6>
+                                    </div>
+                                    <!-- Item 1 -->
+                                    <div class="skillbar" data-percent="90%">
+                                        <div class="skillbar-title"><span>Windows</span></div>
+                                        <div class="skillbar-bar wow" id="windows"></div>
+                                        <div class="skill-bar-percent">90%</div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="skillbar" data-percent="70%">
+                                        <div class="skillbar-title"><span>Linux</span></div>
+                                        <div class="skillbar-bar wow" id="linux"></div>
+                                        <div class="skill-bar-percent">70%</div>
+                                    </div>
+                                    <!-- Item 3 -->
+                                    <div class="skillbar" data-percent="30%">
+                                        <div class="skillbar-title"><span>Git</span></div>
+                                        <div class="skillbar-bar wow" id="git"></div>
+                                        <div class="skill-bar-percent">30%</div>
+                                    </div>
+                                    <!-- Item 4 -->
+                                    <div class="skillbar" data-percent="20%">
+                                        <div class="skillbar-title"><span>Scrum</span></div>
+                                        <div class="skillbar-bar wow" id="scrum"></div>
+                                        <div class="skill-bar-percent">20%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- Idiomas -->
+                                <div class="col s12 m4">
+                                    <!-- Titulo -->
+                                    <div class="skills-title">
+                                        <h6 class="center">Idiomas</h6>
+                                    </div>
+                                    <!-- Item 1 -->
+                                    <div class="skillbar" data-percent="100%">
+                                        <div class="skillbar-title"><span>Español</span></div>
+                                        <div class="skillbar-bar wow" id="espanol"></div>
+                                        <div class="skill-bar-percent">100%</div>
+                                    </div>
+                                    <!-- Item 2 -->
+                                    <div class="skillbar" data-percent="20%">
+                                        <div class="skillbar-title"><span>Ingles</span></div>
+                                        <div class="skillbar-bar wow" id="ingles"></div>
+                                        <div class="skill-bar-percent">20%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==========================================
+                      PASATIEMPOS
+    ===========================================-->
+
+    <section id="pasatiempos" class="scrollspy">
+        <div class="container">
+            <!-- Titulo -->
+            <h4 class="center wow zoomIn">
+                <img class="icono tooltipped" src="{% static 'flaticon/png/003-veintiuna.png' %}" alt="Icono realizado por Darius Dan de www.flaticon.com" data-tooltip="Icono realizado por Darius Dan de www.flaticon.com">
+                PASATIEMPOS
+            </h4>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card z-depth-2 wow fadeInUp">
+                        <!-- pantalla l -->
+                        <div class="row">
+                            <!-- Icono 1 -->
+                            <div class="col l2 m4 s6  box center fondo">
+                                <div class="icon">
+                                    <img class="icono2 tooltipped" src="{% static 'flaticon/png/005-poker.png' %}" alt="Icono realizado por Nikita Golubev de www.flaticon.com" data-tooltip="Icono realizado por Nikita Golubev de www.flaticon.com">
+                                    <br>
+                                    <span class="color1t">Cardistry</span>
+                                </div>
+                            </div>
+                            <!-- Icono 2 -->
+                            <div class="col l2 m4 s6  box center">
+                                <div class="icon">
+                                    <img class="icono2 tooltipped" src="{% static 'flaticon/png/004-esports.png' %}" alt="Icono realizado por wanicon de www.flaticon.com" data-tooltip="Icono realizado por wanicon de www.flaticon.com">
+                                    <br>
+                                    <span class="color2t">Video Juegos</span>
+                                </div>
+                            </div>
+                            <!-- Icono 3 -->
+                            <div class="col l2 m4 s6  box center fondo">
+                                <div class="icon">
+                                    <img class="icono2 tooltipped" src="{% static 'flaticon/png/006-excursionismo.png' %}" alt="Icono realizado por monkik de www.flaticon.com" data-tooltip="Icono realizado por monkik de www.flaticon.com">
+                                    <br>
+                                    <span class="color1t">Caminar</span>
+                                </div>
+                            </div>
+                            <!-- Icono 4 -->
+                            <div class="col l2 m4 s6  box center">
+                                <div class="icon">
+                                    <img class="icono2 tooltipped" src="{% static 'flaticon/png/007-claqueta.png' %}" alt="Icono realizado por Freepik de www.flaticon.com" data-tooltip="Icono realizado por Freepik de www.flaticon.com">
+                                    <br>
+                                    <span class="color2t">Películas</span>
+                                </div>
+                            </div>
+                            <!-- Icono 5 -->
+                            <div class="col l2 m4 s6  box center fondo">
+                                <div class="icon">
+                                    <img class="icono2 tooltipped" src="{% static 'flaticon/png/009-cubo.png' %}" alt="Icono realizado por Freepik de www.flaticon.com" data-tooltip="Icono realizado por Freepik de www.flaticon.com">
+                                    <br>
+                                    <span class="color1t">Rubik</span>
+                                </div>
+                            </div>
+                            <!-- Icono 6 -->
+                            <div class="col l2 m4 s6  box center">
+                                <div class="icon">
+                                    <img class="icono2 tooltipped" src="{% static 'flaticon/png/008-activar-sonido.png' %}" alt="Icono realizado por Freepik de www.flaticon.com" data-tooltip="Icono realizado por Freepik de www.flaticon.com">
+                                    <br>
+                                    <span class="color2t">Música</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==========================================
+                      CONTACTAME
+    ===========================================-->
+
+    <section id="contactame" class="scrollspy">
+        <div class="container">
+            <!-- Titulo -->
+            <h4 class="center wow zoomIn">
+                <img class="icono tooltipped" src="{% static 'flaticon/png/011-correo-electronico.png' %}" alt="Icono realizado por Kiranshastry de www.flaticon.com" data-tooltip="Icono realizado por Kiranshastry de www.flaticon.com">
+                CONTÁCTAME
+            </h4>
+        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Formulario de mensaje -->
+                <div class="col s12 xl5">
+                    <div class="card z-depth-2 wow fadeInUp">
+                        <div class="card-content">
+                            <form class="col s12" id="form-contact">
+                                <div class="row">
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">person</i>
+                                        <input id="nombre" type="text" class="validate" required>
+                                        <label for="nombre">Nombre</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">business_center</i>
+                                        <input id="asunto" type="text" class="validate" required>
+                                        <label for="asunto">Asunto</label>
+                                    </div>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">email</i>
+                                        <input id="email" type="email" class="validate" required>
+                                        <label for="email">Email</label>
+                                        <span class="helper-text" data-error="Email Invalido" data-success="Valido"></span>
+                                    </div>
+                                    <div class="input-field">
+                                        <i class="material-icons prefix">message</i>
+                                        <textarea id="mensaje" class="materialize-textarea" data-length="120" required></textarea>
+                                        <label for="mensaje">Mensaje</label>
+                                    </div>
+                                    <div class="center">
+                                        <input type="submit" class="btn waves-effect" value="Enviar">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!--FORM LOADER-->
+                        <div id="form-loader" class="progress is-hidden">
+                            <div class="indeterminate"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mapa de Google Maps -->
+                <div class="col s12 xl7">
+                    <div class="card z-depth-2 wow fadeInUp">
+                        <div class="card-content google-maps">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31675.301708757906!2d-73.11634460480165!3d7.078057711484529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f61d96e0699%3A0x247ca9bc744c07f0!2sFloridablanca%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1586966137085!5m2!1ses-419!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Boton de Subir -->
+    <div id="boton-up" class="boton-up">
+        <div class="fixed-action-btn">
+            <a class="waves-effect btn btn-floating"><i class="material-icons">keyboard_arrow_up</i></a>
+        </div>
+    </div>
+
+
+    <!--==========================================
+                          FOOTER
+    ===========================================-->
+
+    <footer>
+        <div class="container">
+            <!--FOOTER DETAILS-->
+            <p class="center">
+                <i class="hecho">Copyright © 2020 Hecho por</i> <i class="dueno"><b>Hugo Eduardo Carvajalino Solano</b></i>
+            </p>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Scripts Jquey -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Wow -->
+    <script src="{% static 'js/wow.min.js' %}"></script>
+
+    <script>
+    new WOW().init();
+
+    document.addEventListener('DOMContentLoaded', function() {
+        //Boton del menu
+        var elems = document.querySelectorAll('.fixed-action-btn');
+        var instances = M.FloatingActionButton.init(elems);
+        //Menu
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems);
+        //scrollspy
+        var elems = document.querySelectorAll('.scrollspy');
+        var instances = M.ScrollSpy.init(elems, {
+            scrollOffset: 10,
+            throttle: 1000
+        });
+        //tooltipped
+        var elems = document.querySelectorAll('.tooltipped');
+        var instances = M.Tooltip.init(elems, {
+            position: 'top'
+        });
+        //textarea
+        $('textarea#mensaje').characterCounter();
+    });
+
+    //scroll del boton-up y aparicion
+    $(document).ready(function(){
+
+        $('.boton-up').click(function(){
+            $('body, html').animate({
+                scrollTop: '0px'
+            });
+        });
+
+        $(window).scroll(function(){
+            if( $(this).scrollTop() > 0 ){
+                $('.boton-up').slideDown(1000);
+            }else{
+                $('.boton-up').slideUp(300);
+            }
+        });
+
+    });
+
+    </script>
+
+    <script>
+        //PRELOADER con jQuery
+        window.onload = function(){
+            $('#preloader').fadeOut();
+            $('body').removeClass('hidden');
+        }
+    </script>
+
+</body>
+</html>

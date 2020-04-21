@@ -1,0 +1,894 @@
+/*
+Comandos
+sass --watch sass:css
+*/
+
+$color-primario: #262525;
+$color-texto: #7B7B7B;
+$color-boton: #085BA4;
+
+.wow { visibility: hidden; }
+
+/*============================================
+                 PRELOADER
+============================================*/
+.hidden {
+    overflow: hidden;
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-primario;
+    z-index: 98;
+    #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        width: 150px;
+        height: 150px;
+        margin: -75px 0 0 -75px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #46a4f6;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #168cf4;
+            -webkit-animation: spin 3s linear infinite;
+            animation: spin 3s linear infinite;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: $color-boton;
+            -webkit-animation: spin 1.5s linear infinite;
+            animation: spin 1.5s linear infinite;
+        }
+    }
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    .texto{
+        width: 100%;
+        position: absolute;
+        color: $color-texto;
+        top: 62%;
+        h3 {
+          padding: 0;
+          margin: 0;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+        }
+
+        h5 {
+          /*detail*/
+          font-size: 16px;
+          padding: 0;
+          margin: 0;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+        }
+    }
+}
+
+
+/*============================================
+                  HEADER
+============================================*/
+
+#inicio {
+    #menu-items {
+        background: $color-primario;
+        a {
+            color: $color-texto;
+            i {
+                color: $color-texto;
+            }
+        }
+    }
+    .movil {
+        .fixed-action-btn {
+            right: 82%;
+            height: 96%;
+            .btn-floating {
+                background: $color-boton;
+                i {
+                    color:  $color-primario;
+                }
+            }
+        }
+    }
+    .pc {
+        .fixed-action-btn {
+            right: 94%;
+            height: 96%;
+            .btn-floating {
+                background: $color-boton;
+                i {
+                    color: $color-primario;
+                }
+            }
+        }
+    }
+    .header-background {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 370px;
+        background: url("../images/inicio.jpg") no-repeat;;
+        //background: $color-texto;
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        .card {
+            background-color: $color-primario;
+        }
+        #profile {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            img {
+                width: 365px;
+                height: 500px;
+            }
+        }
+        .card-content {
+            color: $color-texto;
+            .clearfix {
+                clear: both;
+            }
+            .title {
+                display: block;
+                float: left;
+                /*color: #000;*/
+                line-height: 26px;
+            }
+            .content {
+                display: block;
+                margin-left: 30px;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+            .social {
+              top: 0;
+              margin-left: 5px;
+              margin-bottom: 4px;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        .header-background {
+            position: relative;
+            width: 100%;
+            height: auto;
+            overflow: visible;
+            z-index: 1;
+            padding-top: 100px;
+            #profile {
+                position: ansolute;
+                bottom: 83%;
+                left: 0;
+                width: 150px;
+                height: auto;
+                margin-right: auto;
+                margin-left: auto;
+                z-index: 1;
+                background-color: transparent;
+                img {
+                    width: 250px;
+                    height: 150px;
+                    border-radius: 50%;
+                    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+                    border: 1px solid #000000;
+                }
+            }
+            .card-content {
+                padding-top: 80px;
+            }
+        }
+    }
+    @media (min-width: 1200px) {
+        .header-background {
+            #profile {
+                img {
+                    height: 505px;
+                }
+            }
+        }
+    }
+    @media (min-width: 1450px) {
+        .header-background {
+            #profile {
+                img {
+                    height: 470px;
+                }
+            }
+        }
+    }
+}
+
+/*============================================
+                  INFORMACION
+============================================*/
+
+#informacion {
+    .card {
+        background-color: $color-primario;
+    }
+    .card-content {
+        color: $color-texto;
+    }
+    .botonconf {
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+        animation-delay: 1s;
+        text-align: center;
+        .btn {
+          margin: 7px 7px;
+          background: $color-boton;
+          color: #000000;
+          width: 180px;
+          border-radius: 30px;
+        }
+    }
+}
+
+/*============================================
+                  EDUCACION
+============================================*/
+
+#educacion {
+    h4 {
+        color: $color-texto;
+        .icono {
+            width: 45px;
+            height: 45px;
+            vertical-align: text-top;
+        }
+    }
+    .timeline {
+        position: relative;
+        .timeline-event {
+            position: relative;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            .timeline-content {
+                position: relative;
+                width: calc(50% - 50px);
+            }
+            &::before {
+                display: block;
+                content: "";
+                width: 5px;
+                height: calc(50% - 30px);
+                position: absolute;
+                background: $color-boton;
+                left: calc(50% - 1px); //centrar linea
+                top: 0;
+            }
+            &::after {
+                display: block;
+                content: "";
+                width: 5px;
+                height: calc(50% - 30px);
+                position: absolute;
+                background: $color-boton;
+                left: calc(50% - 1px);
+                top: calc(50% + 30px);
+            }
+
+            &:first-child::before, &:last-child::after {
+                display: none;
+            }
+
+            &:nth-child(even) .timeline-content {
+                margin-left: calc(50% + 50px);
+            }
+            &:nth-child(odd) .timeline-content {
+                margin-left: 0;
+            }
+            .card {
+                background-color: $color-primario;
+            }
+            .card-content {
+                color: $color-texto;
+            }
+            blockquote {
+                border-left: 6px solid $color-boton;
+            }
+        }
+        .timeline-badge {
+            display: block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: $color-boton;
+            color: $color-primario;
+            top: calc(50% - 25px);
+            right: calc(50% - 25px);
+            border-radius: 50%;
+            text-align: center;
+            margin: auto;
+            cursor: default;
+            h6 {
+                font-weight: bold;
+                font-size: 27px;
+                line-height: 25px;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        .timeline {
+            .timeline-event {
+                .timeline-content {
+                    width: calc(100% - 70px);
+                }
+                &::before, &::after {
+                    left: 19px;
+                }
+                &:nth-child(even) .timeline-content, &:nth-child(odd) .timeline-content {
+                    margin-left: 70px;
+                }
+            }
+            .timeline-badge {
+              left: 0;
+              right: auto;
+            }
+        }
+    }
+}
+
+/*============================================
+                  HABILIDADES
+============================================*/
+
+#habilidades {
+    h4 {
+        color: $color-texto;
+        .icono {
+            width: 45px;
+            height: 45px;
+            vertical-align: text-top;
+        }
+    }
+    .card {
+        background-color: $color-boton;
+    }
+    .card-content {
+        color: $color-primario;
+        .skills-title {
+            margin: 15px 0;
+          h6 {
+              font-weight: 500;
+              color: $color-primario;
+              text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+          }
+        }
+        .skillbar {
+            position: relative;
+            display: block;
+            margin-bottom: 17px;
+            margin-top: 45px;
+            width: 100%;
+            padding: 0 0;
+            background: $color-texto;
+            height: 4px;
+          .skillbar-title {
+              position: absolute;
+              top: 0;
+              left: 0;
+              font-size: 1em;
+            span {
+                /*titulo de la barra*/
+                display: block;
+                padding: 3px 0;
+                margin-top: -25px;
+                line-height: 15px;
+                color: $color-primario;
+            }
+          }
+          .skillbar-bar {
+              height: 100%;
+              width: 0%;
+              background: $color-primario;
+              //overflow: hidden;
+              position: absolute;
+              -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+              -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+              -webkit-animation-fill-mode: both;
+              animation-fill-mode: both;
+          }
+          .skill-bar-percent {
+              position: absolute;
+              right: 1px;
+              top: -20px;
+              font-size: .8em;
+              line-height: 15px;
+              color: $color-primario;
+          }
+          //Lenguajes logicos
+          #python {
+              -webkit-animation-name: python;
+              -moz-animation-name: python;
+              animation-name: python;
+              -webkit-animation-delay: 1s;
+              -moz-animation-delay: 1s;
+              animation-delay: 1s;
+          }
+          #c {
+              -webkit-animation-name: c;
+              -moz-animation-name: c;
+              animation-name: c;
+              -webkit-animation-delay: 1.5s;
+              -moz-animation-delay: 1.5s;
+              animation-delay: 1.5s;
+          }
+          //frameworks
+          #django {
+              -webkit-animation-name: django;
+              -moz-animation-name: django;
+              animation-name: django;
+              -webkit-animation-delay: 1s;
+              -moz-animation-delay: 1s;
+              animation-delay: 1s;
+          }
+          #materialize {
+              -webkit-animation-name: materialize;
+              -moz-animation-name: materialize;
+              animation-name: materialize;
+              -webkit-animation-delay: 1.5s;
+              -moz-animation-delay: 1.5s;
+              animation-delay: 1.5s;
+          }
+          #boostrap {
+              -webkit-animation-name: boostrap;
+              -moz-animation-name: boostrap;
+              animation-name: boostrap;
+              -webkit-animation-delay: 2s;
+              -moz-animation-delay: 2s;
+              animation-delay: 2s;
+          }
+          #efc {
+              -webkit-animation-name: efc;
+              -moz-animation-name: efc;
+              animation-name: efc;
+              -webkit-animation-delay: 2.5s;
+              -moz-animation-delay: 2.5s;
+              animation-delay: 2.5s;
+          }
+          //Lenguajes Etiquetas
+          #html {
+              -webkit-animation-name: html;
+              -moz-animation-name: html;
+              animation-name: html;
+              -webkit-animation-delay: 1s;
+              -moz-animation-delay: 1s;
+              animation-delay: 1s;
+          }
+          #css {
+              -webkit-animation-name: css;
+              -moz-animation-name: css;
+              animation-name: css;
+              -webkit-animation-delay: 1.5s;
+              -moz-animation-delay: 1.5s;
+              animation-delay: 1.5s;
+          }
+          #sass {
+              -webkit-animation-name: sass;
+              -moz-animation-name: sass;
+              animation-name: sass;
+              -webkit-animation-delay: 2s;
+              -moz-animation-delay: 2s;
+              animation-delay: 2s;
+          }
+          #javascript {
+              -webkit-animation-name: javascript;
+              -moz-animation-name: javascript;
+              animation-name: javascript;
+              -webkit-animation-delay: 2.5s;
+              -moz-animation-delay: 2.5s;
+              animation-delay: 2.5s;
+          }
+          //Redes
+          #ipv4 {
+              -webkit-animation-name: ipv4;
+              -moz-animation-name: ipv4;
+              animation-name: ipv4;
+              -webkit-animation-delay: 1s;
+              -moz-animation-delay: 1s;
+              animation-delay: 1s;
+          }
+          #ipv6 {
+              -webkit-animation-name: ipv6;
+              -moz-animation-name: ipv6;
+              animation-name: ipv6;
+              -webkit-animation-delay: 1.5s;
+              -moz-animation-delay: 1.5s;
+              animation-delay: 1.5s;
+          }
+          #cisco {
+              -webkit-animation-name: cisco;
+              -moz-animation-name: cisco;
+              animation-name: cisco;
+              -webkit-animation-delay: 2s;
+              -moz-animation-delay: 2s;
+              animation-delay: 2s;
+          }
+          #acl {
+              -webkit-animation-name: acl;
+              -moz-animation-name: acl;
+              animation-name: acl;
+              -webkit-animation-delay: 2.5s;
+              -moz-animation-delay: 2.5s;
+              animation-delay: 2.5s;
+          }
+          #iot {
+              -webkit-animation-name: iot;
+              -moz-animation-name: iot;
+              animation-name: iot;
+              -webkit-animation-delay: 3s;
+              -moz-animation-delay: 3s;
+              animation-delay: 3s;
+          }
+          #servidores {
+              -webkit-animation-name: servidores;
+              -moz-animation-name: servidores;
+              animation-name: servidores;
+              -webkit-animation-delay: 3.5s;
+              -moz-animation-delay: 3.5s;
+              animation-delay: 3.5s;
+          }
+          //Base de Datos
+          #sql {
+              -webkit-animation-name: sql;
+              -moz-animation-name: sql;
+              animation-name: sql;
+              -webkit-animation-delay: 1s;
+              -moz-animation-delay: 1s;
+              animation-delay: 1s;
+          }
+          #postgre {
+              -webkit-animation-name: postgre;
+              -moz-animation-name: postgre;
+              animation-name: postgre;
+              -webkit-animation-delay: 1.5s;
+              -moz-animation-delay: 1.5s;
+              animation-delay: 1.5s;
+          }
+          #mysql {
+              -webkit-animation-name: mysql;
+              -moz-animation-name: mysql;
+              animation-name: mysql;
+              -webkit-animation-delay: 2s;
+              -moz-animation-delay: 2s;
+              animation-delay: 2s;
+          }
+          //Otros
+          #windows {
+              -webkit-animation-name: windows;
+              -moz-animation-name: windows;
+              animation-name: windows;
+              -webkit-animation-delay: 1s;
+              -moz-animation-delay: 1s;
+              animation-delay: 1s;
+          }
+          #linux {
+              -webkit-animation-name: linux;
+              -moz-animation-name: linux;
+              animation-name: linux;
+              -webkit-animation-delay: 1.5s;
+              -moz-animation-delay: 1.5s;
+              animation-delay: 1.5s;
+          }
+          #git {
+              -webkit-animation-name: git;
+              -moz-animation-name: git;
+              animation-name: git;
+              -webkit-animation-delay: 2s;
+              -moz-animation-delay: 2s;
+              animation-delay: 2s;
+          }
+          #scrum {
+              -webkit-animation-name: scrum;
+              -moz-animation-name: scrum;
+              animation-name: scrum;
+              -webkit-animation-delay: 2.5s;
+              -moz-animation-delay: 2.5s;
+              animation-delay: 2.5s;
+          }
+          //Idiomas
+          #espanol {
+              -webkit-animation-name: espanol;
+              -moz-animation-name: espanol;
+              animation-name: espanol;
+              -webkit-animation-delay: 1s;
+              -moz-animation-delay: 1s;
+              animation-delay: 1s;
+          }
+          #ingles {
+              //-webkit-animation-name: ingles;
+              //-moz-animation-name: ingles;
+              animation-name: ingles;
+              //-webkit-animation-delay: 1.5s;
+              //-moz-animation-delay: 1.5s;
+              animation-delay: 1.5s;
+          }
+        }
+    }
+    //lenguajes logicos
+    @-webkit-keyframes python{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes c{0%{width: 0%;} 100%{ width: 50%;}}
+
+    @-moz-keyframes python{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes c{0%{width: 0%;} 100%{ width: 50%;}}
+
+    @keyframes python{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes c{0%{width: 0%;} 100%{ width: 50%;}}
+
+    //frameworks
+    @-webkit-keyframes django{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes materialize{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes boostrap{0%{width: 0%;} 100%{ width: 50%;}}
+    @-webkit-keyframes efc{0%{width: 0%;} 100%{ width: 40%;}}
+
+    @-moz-keyframes django{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes materialize{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes boostrap{0%{width: 0%;} 100%{ width: 50%;}}
+    @-moz-keyframes efc{0%{width: 0%;} 100%{ width: 40%;}}
+
+    @keyframes django{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes materialize{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes boostrap{0%{width: 0%;} 100%{ width: 50%;}}
+    @keyframes efc{0%{width: 0%;} 100%{ width: 40%;}}
+
+    //Lenguajes Etiquetas
+    @-webkit-keyframes html{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes css{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes sass{0%{width: 0%;} 100%{ width: 50%;}}
+    @-webkit-keyframes javascript{0%{width: 0%;} 100%{ width: 50%;}}
+
+    @-moz-keyframes html{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes css{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes sass{0%{width: 0%;} 100%{ width: 50%;}}
+    @-moz-keyframes javascript{0%{width: 0%;} 100%{ width: 50%;}}
+
+    @keyframes html{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes css{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes sass{0%{width: 0%;} 100%{ width: 50%;}}
+    @keyframes javascript{0%{width: 0%;} 100%{ width: 50%;}}
+
+    //redes
+    @-webkit-keyframes ipv4{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes ipv6{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes cisco{0%{width: 0%;} 100%{ width: 60%;}}
+    @-webkit-keyframes acl{0%{width: 0%;} 100%{ width: 50%;}}
+    @-webkit-keyframes iot{0%{width: 0%;} 100%{ width: 40%;}}
+    @-webkit-keyframes servidores{0%{width: 0%;} 100%{ width: 30%;}}
+
+    @-moz-keyframes ipv4{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes ipv6{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes cisco{0%{width: 0%;} 100%{ width: 60%;}}
+    @-moz-keyframes acl{0%{width: 0%;} 100%{ width: 50%;}}
+    @-moz-keyframes iot{0%{width: 0%;} 100%{ width: 40%;}}
+    @-moz-keyframes servidores{0%{width: 0%;} 100%{ width: 30%;}}
+
+    @keyframes ipv4{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes ipv6{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes cisco{0%{width: 0%;} 100%{ width: 60%;}}
+    @keyframes acl{0%{width: 0%;} 100%{ width: 50%;}}
+    @keyframes iot{0%{width: 0%;} 100%{ width: 40%;}}
+    @keyframes servidores{0%{width: 0%;} 100%{ width: 30%;}}
+
+    //bases de datos
+    @-webkit-keyframes sql{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes postgre{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes mysql{0%{width: 0%;} 100%{ width: 50%;}}
+
+    @-moz-keyframes sql{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes postgre{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes mysql{0%{width: 0%;} 100%{ width: 50%;}}
+
+    @keyframes sql{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes postgre{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes mysql{0%{width: 0%;} 100%{ width: 50%;}}
+
+    //otros
+    @-webkit-keyframes windows{0%{width: 0%;} 100%{ width: 90%;}}
+    @-webkit-keyframes linux{0%{width: 0%;} 100%{ width: 70%;}}
+    @-webkit-keyframes git{0%{width: 0%;} 100%{ width: 30%;}}
+    @-webkit-keyframes scrum{0%{width: 0%;} 100%{ width: 20%;}}
+
+    @-moz-keyframes windows{0%{width: 0%;} 100%{ width: 90%;}}
+    @-moz-keyframes linux{0%{width: 0%;} 100%{ width: 70%;}}
+    @-moz-keyframes git{0%{width: 0%;} 100%{ width: 30%;}}
+    @-moz-keyframes scrum{0%{width: 0%;} 100%{ width: 20%;}}
+
+    @keyframes windows{0%{width: 0%;} 100%{ width: 90%;}}
+    @keyframes linux{0%{width: 0%;} 100%{ width: 70%;}}
+    @keyframes git{0%{width: 0%;} 100%{ width: 30%;}}
+    @keyframes scrum{0%{width: 0%;} 100%{ width: 20%;}}
+
+    //idiomas
+    @-webkit-keyframes espanol{0%{width: 0%;} 100%{ width: 100%;}}
+    @-webkit-keyframes ingles{0%{width: 0%;} 100%{ width: 20%;}}
+
+    @-moz-keyframes espanol{0%{width: 0%;} 100%{ width: 100%;}}
+    @-moz-keyframes ingles{0%{width: 0%;} 100%{ width: 20%;}}
+
+    @keyframes espanol{0%{width: 0%;} 100%{ width: 100%;}}
+    @keyframes ingles{0%{width: 0%;} 100%{ width: 20%;}}
+}
+
+/*============================================
+                  PASATIEMPOS
+============================================*/
+#pasatiempos {
+    h4 {
+        color: $color-texto;
+        .icono {
+            width: 45px;
+            height: 45px;
+            vertical-align: text-top;
+        }
+    }
+    .card {
+        background-color: $color-primario;
+        .box {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .icono2 {
+                width: 60px;
+                height: 60px;
+            }
+            .color1t {
+                color: $color-primario;
+            }
+            .color2t {
+                color: $color-boton;
+            }
+        }
+        .fondo {
+            background: $color-boton;
+        }
+    }
+}
+
+/*============================================
+                  CONTACTAME
+============================================*/
+
+#contactame{
+    h4 {
+        color: $color-texto;
+        .icono {
+            width: 45px;
+            height: 45px;
+            vertical-align: text-top;
+        }
+    }
+    .card {
+        background-color: $color-primario;
+    }
+    .card-content {
+        color: $color-texto;
+        .input-field {
+            color: $color-texto;
+            label {
+                color: $color-texto;
+            }
+            input[type=text], input[type=email], textarea {
+                color: $color-texto;
+            }
+            input[type=text]:focus + label, input[type=email]:focus + label, textarea:focus + label {
+                color: $color-boton;
+            }
+            input[type=text]:focus, input[type=email]:focus, textarea:focus {
+                border-bottom: 1px solid $color-boton;
+                box-shadow: 0 1px 0 0 $color-boton;
+            }
+            .prefix.active {
+                color: $color-boton;
+            }
+            textarea {
+                max-height: 105px;
+                min-height: 105px;
+            }
+        }
+        .btn {
+          margin: 7px 7px;
+          background: $color-boton;
+          color: #000000;
+          width: 180px;
+          border-radius: 30px;
+        }
+    }
+    .is-hidden {
+        //display: block;
+        //visibility: visible;
+        visibility: hidden;
+    }
+    .indeterminate {
+        background: $color-boton;
+    }
+    .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 470px;
+        overflow: hidden;
+    }
+    .google-maps {
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+}
+
+//Boton de Subir
+#boton-up {
+    display: none;
+    .fixed-action-btn {
+        .btn-floating {
+            background: $color-boton;
+            i {
+                color: $color-primario;
+            }
+        }
+    }
+}
+
+/*============================================
+                  FOOTER
+============================================*/
+
+.hecho {
+    color: $color-texto;
+}
+.dueno {
+    color: $color-boton;
+}
