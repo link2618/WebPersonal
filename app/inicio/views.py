@@ -1,10 +1,12 @@
 from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from django.views.generic import (
     TemplateView,
     )
 
+from django.http import HttpResponse
+from django.contrib import messages
 from django.template.loader import  get_template
 from django.core.mail import EmailMultiAlternatives
 
@@ -30,6 +32,11 @@ def Inicio(request):
         asunto = request.POST.get('asunto')
         email = request.POST.get('email')
         mensaje = request.POST.get('mensaje')
+
         send_mail(nombre, asunto, email, mensaje)
+
+        messages.success(request, 'El mensaje ha sido enviado con exito.')
+        return redirect("inicio:inicio")
+        #return HttpResponse('El mensaje ha sido enviado con exito.')
 
     return render(request, template_name, {})

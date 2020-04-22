@@ -19,6 +19,9 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- Jquery Confirm -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+
     <title>Hugo Eduardo Carvajalino Solano</title>
 </head>
 <body style="background-color:#262525;" class="hidden">
@@ -757,6 +760,9 @@
     <!-- Wow -->
     <script src="{% static 'js/wow.min.js' %}"></script>
 
+    <!-- Jquery Confirm -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+
     <script>
     new WOW().init();
 
@@ -809,6 +815,26 @@
             $('#preloader').fadeOut();
             $('body').removeClass('hidden');
         }
+
+        //Funcion de jquey confirm
+        function mensaje(msg, color="blue", tit='')
+        {
+            $.alert({
+                title: tit,
+                theme : 'dark',
+                type: color,
+                boxWidth: '30%',
+                useBootstrap: false,
+                content: msg
+            });
+        }
+
+        //cuando se imprime un mensaje se manda una variable messages
+        {% if messages %}
+             {% for message in messages %}
+                mensaje('{{ message }}')
+             {% endfor %}
+        {% endif %}
     </script>
 
 </body>
