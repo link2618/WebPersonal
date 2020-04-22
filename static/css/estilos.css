@@ -13,6 +13,10 @@ sass --watch sass:css
   overflow: hidden;
 }
 
+.hiddenitem {
+    visibility: hidden;
+}
+
 #preloader {
   position: fixed;
   top: 0;
