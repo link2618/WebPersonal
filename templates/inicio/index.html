@@ -674,27 +674,28 @@
                 <div class="col s12 xl5">
                     <div class="card z-depth-2 wow fadeInUp">
                         <div class="card-content">
-                            <form class="col s12" id="form-contact">
+                            <form class="col s12" id="form-contact" method="POST">
+                                {% csrf_token %}
                                 <div class="row">
                                     <div class="input-field">
                                         <i class="material-icons prefix">person</i>
-                                        <input id="nombre" type="text" class="validate" required>
+                                        <input id="nombre" name="nombre" type="text" class="validate" required>
                                         <label for="nombre">Nombre</label>
                                     </div>
                                     <div class="input-field">
                                         <i class="material-icons prefix">business_center</i>
-                                        <input id="asunto" type="text" class="validate" required>
+                                        <input id="asunto" name="asunto" type="text" class="validate" required>
                                         <label for="asunto">Asunto</label>
                                     </div>
                                     <div class="input-field">
                                         <i class="material-icons prefix">email</i>
-                                        <input id="email" type="email" class="validate" required>
+                                        <input id="email" name="email" type="email" class="validate" required>
                                         <label for="email">Email</label>
                                         <span class="helper-text" data-error="Email Invalido" data-success="Valido"></span>
                                     </div>
                                     <div class="input-field">
                                         <i class="material-icons prefix">message</i>
-                                        <textarea id="mensaje" class="materialize-textarea" data-length="120" required></textarea>
+                                        <textarea id="mensaje" name="mensaje" class="materialize-textarea" data-length="120" required></textarea>
                                         <label for="mensaje">Mensaje</label>
                                     </div>
                                     <div class="center">
