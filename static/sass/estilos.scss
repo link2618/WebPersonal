@@ -840,12 +840,19 @@ $color-boton: #085BA4;
                 min-height: 105px;
             }
         }
-        .btn {
-          margin: 7px 7px;
-          background: $color-boton;
-          color: #000000;
-          width: 180px;
-          border-radius: 30px;
+        .botonconf {
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+            animation-delay: 1s;
+            text-align: center;
+            .btn {
+              margin: 7px 7px;
+              background: $color-boton;
+              color: #000000;
+              width: 180px;
+              border-radius: 30px;
+            }
         }
     }
     .is-hidden {
@@ -859,7 +866,7 @@ $color-boton: #085BA4;
     .google-maps {
         position: relative;
         padding-bottom: 75%; // This is the aspect ratio
-        height: 470px;
+        height: 493px;
         overflow: hidden;
     }
     .google-maps {

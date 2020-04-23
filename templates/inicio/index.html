@@ -701,13 +701,15 @@
                                         <textarea id="mensaje" name="mensaje" class="materialize-textarea" data-length="120" required></textarea>
                                         <label for="mensaje">Mensaje</label>
                                     </div>
-                                    <div class="center">
-                                        <input type="submit" class="btn waves-effect" value="Enviar">
-                                    </div>
+                                </div>
+                                <div class="center botonconf">
+                                    <button type="submit" class="btn waves-effect" id="enviar" name="enviar" onclick="carga();" disabled>Enviar</button>
+                                    <br>
+                                    <br>
                                 </div>
                             </form>
                         </div>
-                        <!--FORM LOADER-->
+                        <!-- Carga del mensaje -->
                         <div id="form-loader" class="progress is-hidden">
                             <div class="indeterminate"></div>
                         </div>
@@ -820,7 +822,7 @@
         }
 
         //Funcion de jquey confirm
-        function mensaje(msg, color="blue", tit='')
+        function mensaje(msg, color="green", tit='')
         {
             $.alert({
                 title: tit,
@@ -838,6 +840,45 @@
                 mensaje('{{ message }}')
              {% endfor %}
         {% endif %}
+
+        //activar boton de formulario contacto
+        var namePattern = "^[a-z A-Z 0-9]{1,30}$";
+        //var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
+        var emailPattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]{1,30}$";
+        function checkInput(idInput, pattern) {
+            return $(idInput).val().match(pattern) ? true : false;
+        }
+        function checkTextarea(idText) {
+            return $(idText).val().length > 0 ? true : false;
+        }
+        function enableSubmit (idForm) {
+            $(idForm + " #enviar").removeAttr("disabled");
+        }
+        function disableSubmit (idForm) {
+            $(idForm + " #enviar").attr("disabled", "disabled");
+        }
+        function checkForm (idForm) {
+            $(idForm + " *").on("change keydown", function() {
+                if (checkInput("#nombre", namePattern) &&
+                    checkInput("#asunto", namePattern) &&
+                    checkInput("#email", emailPattern) &&
+                    checkTextarea("#mensaje"))
+                {
+                    enableSubmit(idForm);
+                } else {
+                    disableSubmit(idForm);
+                }
+            });
+        }
+        $(function() {
+            checkForm("#form-contact");
+        });
+
+        // loader del Mensaje
+        function carga()
+        {
+            $('#form-loader').removeClass('is-hidden');
+        }
     </script>
 
 </body>

@@ -14,7 +14,7 @@ sass --watch sass:css
 }
 
 .hiddenitem {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 #preloader {
@@ -1287,7 +1287,14 @@ sass --watch sass:css
   max-height: 105px;
   min-height: 105px;
 }
-#contactame .card-content .btn {
+#contactame .card-content .botonconf {
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  animation-delay: 1s;
+  text-align: center;
+}
+#contactame .card-content .botonconf .btn {
   margin: 7px 7px;
   background: #085BA4;
   color: #000000;
@@ -1303,7 +1310,7 @@ sass --watch sass:css
 #contactame .google-maps {
   position: relative;
   padding-bottom: 75%;
-  height: 470px;
+  height: 493px;
   overflow: hidden;
 }
 #contactame .google-maps iframe {
